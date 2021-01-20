@@ -1,0 +1,19 @@
+// Set unique-id ver
+$ver: unique_id();
+
+// Primary color
+$primary: #280096 !default;
+$colors: () !default;
+
+$primary: $primary !default;
+// $secondary: $dark !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    // 'secondary': $secondary,
+  ),
+  $theme-colors
+);

@@ -1,0 +1,139 @@
+.form-group {
+  .form-icon {
+    margin-right: 0.5rem;
+    color: #e1e1e1;
+  }
+  .form-control {
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    box-shadow: none;
+    &.focus-error {
+      border-color: #ff0000;
+    }
+  }
+  .form-error {
+    color: #ff0000;
+    font-size: 0.75rem;
+  }
+  .select-field {
+    .select__control {
+      border-color: #e1e1e1;
+    }
+  }
+  &.dropzone {
+    cursor: pointer;
+    .form-control {
+      border: none;
+      border-radius: 4px;
+      background-color: #c4c5c5;
+      height: 230px;
+      width: 230px;
+      div:focus {
+        outline: none;
+      }
+      .dropzone-size {
+        font-size: 0.75rem;
+        color: #828282;
+      }
+    }
+    &-profile {
+      margin-bottom: 3rem;
+      .edit-icon {
+        position: relative;
+        margin-left: -2rem;
+        cursor: pointer;
+      }
+      div:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.password {
+  .form-control {
+    display: flex;
+    padding: 0px;
+    height: 38px;
+  }
+  input {
+    border: none;
+    width: 100%;
+    outline: none;
+    height: 100%;
+    padding: 6px 12px;
+  }
+  .icon-btn {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    cursor: pointer;
+  }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none !important;
+
+  &:disabled + .custom-checkbox {
+    &::before {
+      background-color: #e3e3e3 !important;
+    }
+  }
+
+  &:checked + .custom-radio,
+  &:not(:checked) + .custom-radio,
+  &:checked + .custom-checkbox,
+  &:not(:checked) + .custom-checkbox {
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #979797;
+      background-color: #fff;
+    }
+  }
+
+  &:checked + .custom-radio,
+  &:not(:checked) + .custom-radio {
+    &::before {
+      border-radius: 100%;
+    }
+  }
+
+  &:checked + .custom-radio,
+  &:checked + .custom-checkbox {
+    &::before {
+      background-color: $primary !important;
+      border-color: $primary;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 6.5px;
+      width: 5px;
+      height: 8px;
+      border: 2px solid #ffffff;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.custom-radio-label,
+.custom-checkbox-label {
+  margin-left: 1.25rem;
+  white-space: normal;
+  word-break: break-word;
+}
